@@ -33,8 +33,8 @@ body {
   font-family: 'Amatic SC', cursive;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72);
   transition: 
-    font-size 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-    flex 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-size 2s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    flex 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .panel1 { 
@@ -66,12 +66,30 @@ body {
   flex: 1 0 auto;
   justify-content: center;
   align-items: center;
+  transition: transform 2s;
 }
 
-.panel >*:first-child {
+.panel > *:first-child {
   transform: translateY(-100%);
 }
 
 .panel > *:last-child {
   transform: translateY(100%);
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 4rem;
+}
+
+.panel.open >*:first-child {
+  transform: translateY(0);
+}
+
+.panel.open >*:last-child {
+  transform: translateY(0);
+}
+
+.panel.open >*:nth-child(2) {
+  font-size: 6rem;
 }

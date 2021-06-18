@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  /* background-color: #f0f8ff; */
+  background-color: #e6d32f;
 }
 
 .panels {
@@ -31,7 +31,10 @@ body {
   color: #fff;
   font-size: 3rem;
   font-family: 'Amatic SC', cursive;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72);
+  transition: 
+    font-size 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    flex 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .panel1 { 
@@ -63,4 +66,12 @@ body {
   flex: 1 0 auto;
   justify-content: center;
   align-items: center;
+}
+
+.panel >*:first-child {
+  transform: translateY(-100%);
+}
+
+.panel > *:last-child {
+  transform: translateY(100%);
 }

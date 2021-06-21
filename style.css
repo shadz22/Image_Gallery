@@ -16,6 +16,7 @@ body {
 .panels {
   min-height: 100vh;
   display: flex;
+  overflow: hidden;
   
 }
 
@@ -82,11 +83,11 @@ body {
   font-size: 4rem;
 }
 
-.panel.open >*:first-child {
+.panel.open > *:first-child {
   transform: translateY(0);
 }
 
-.panel.open >*:last-child {
+.panel.open > *:last-child {
   transform: translateY(0);
 }
 
